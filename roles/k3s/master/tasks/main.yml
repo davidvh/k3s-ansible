@@ -17,6 +17,22 @@
     group: root
     mode: 0644
 
+- name: Install cert manager
+  copy:
+    src: cert-manager.yaml
+    dest: /var/lib/rancher/k3s/server/manifests/cert-manager.yaml
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Install rancher
+  copy:
+    src: rancher.yaml
+    dest: /var/lib/rancher/k3s/server/manifests/rancher.yaml
+    owner: root
+    group: root
+    mode: 0644
+
 - name: Enable and check K3s service
   systemd:
     name: k3s
