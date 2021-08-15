@@ -10,20 +10,5 @@ metadata:
   namespace: kube-system
 spec:
   chart: nginx-ingress
-  repo: https://kubernetes.github.io/ingress-nginx
+  repo: https://helm.nginx.com/stable
   targetNamespace: ingress-nginx
-  version: v2.10.0
-  set:
-  valuesContent: |-
-    fullnameOverride: ingress-nginx
-    controller:
-      kind: DaemonSet
-      hostNetwork: true
-      service:
-        enabled: false
-      publishService:
-        enabled: false
-      metrics:
-        enabled: true
-      config:
-        use-forwarded-headers: "true"
