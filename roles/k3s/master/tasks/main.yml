@@ -9,6 +9,14 @@
     group: root
     mode: 0644
 
+- name: Install ingress
+  copy:
+    src: nginx-config.yaml
+    dest: /var/lib/rancher/k3s/server/manifests/nginx-config.yaml
+    owner: root
+    group: root
+    mode: 0644
+
 - name: Enable and check K3s service
   systemd:
     name: k3s
