@@ -78,6 +78,14 @@
     dest: /usr/local/bin/crictl
     state: link
 
+- name: Install load balancer
+  copy:
+    src: load-balancer.yaml
+    dest: /var/lib/rancher/k3s/server/manifests/load-balancer.yaml
+    owner: root
+    group: root
+    mode: 0644
+
 - name: Install cert manager
   copy:
     src: cert-manager.yaml
