@@ -12,3 +12,13 @@ spec:
   chart: rook-ceph
   repo: https://charts.rook.io/release
   targetNamespace: rook-ceph
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: rook-ceph-cluster
+  namespace: kube-system
+spec:
+  chart: rook-ceph-cluster
+  repo: https://charts.rook.io/release
+  targetNamespace: rook-ceph
