@@ -10,5 +10,5 @@ metadata:
   namespace: kube-system
 spec:
   chart: argo-cd
-  repo: https://charts.bitnami.com/bitnami
+  repo: https://argoproj.github.io/argo-helm
   targetNamespace: argocd
