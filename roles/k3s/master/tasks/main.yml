@@ -86,14 +86,6 @@
     group: root
     mode: 0644
 
-- name: Install rook
-  copy:
-    src: rook.yaml
-    dest: /var/lib/rancher/k3s/server/manifests/rook.yaml
-    owner: root
-    group: root
-    mode: 0644
-
 - name: Install argocd
   copy:
     src: argocd.yaml
