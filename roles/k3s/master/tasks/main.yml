@@ -94,10 +94,10 @@
     group: root
     mode: 0644
 
-- name: Install rancher
+- name: Install argocd
   copy:
-    src: rancher.yaml
-    dest: /var/lib/rancher/k3s/server/manifests/rancher.yaml
+    src: argocd.yaml
+    dest: /var/lib/rancher/k3s/server/manifests/argocd.yaml
     owner: root
     group: root
     mode: 0644
